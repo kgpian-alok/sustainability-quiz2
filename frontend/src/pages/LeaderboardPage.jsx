@@ -41,6 +41,14 @@ const LeaderboardPage = () => {
     );
   }
 
+  if (error) {
+    return (
+      <div className="bg-slate-900 text-white min-h-screen flex items-center justify-center">
+        <p className="text-red-500 text-lg">{error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-slate-900 text-white min-h-screen">
       {/* HEADER */}
