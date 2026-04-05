@@ -24,13 +24,13 @@ export const AuthProvider = ({ children }) => {
         if (response.ok) {
           const data = await response.json();
           setUser(data.user);
-          toast.success("User authenticated successfully");
+          // toast.success("User authenticated successfully");
         } else {
-          toast.error("Session expired. Please log in or sign up again.");
+          // toast.error("Session expired. Please log in or sign up again.");
           setUser(null);
         }
       } catch (error) {
-        toast.error("Could not fetch user", error);
+        // toast.error("Could not fetch user", error);
         setUser(null);
       } finally {
         setIsLoading(false);

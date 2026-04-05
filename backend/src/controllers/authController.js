@@ -43,9 +43,9 @@ const register = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "lax",
+      sameSite: "none",
       path: "/",
     });
 
@@ -61,9 +61,9 @@ const register = async (req, res) => {
   } catch (error) {
     console.error("Registration Error:", error);
     res.status(500).json({ message: "Server error during registration." });
-  } finally {
+  } /* finally {
     client.release();
-  }
+  } */
 };
 
 // --- LOGIN ---
@@ -91,9 +91,9 @@ const login = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "lax",
+      sameSite: "none",
       path: "/",
     });
 
@@ -110,9 +110,9 @@ const login = async (req, res) => {
   } catch (error) {
     console.error("Login Error:", error);
     res.status(500).json({ message: "Server error during login." });
-  } finally {
+  } /* finally {
     client.release();
-  }
+  } */
 };
 
 // --- getMe ---
