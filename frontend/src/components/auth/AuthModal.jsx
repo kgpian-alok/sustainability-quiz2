@@ -205,7 +205,7 @@ const AuthModal = ({ isOpen, onClose, initialView, setView }) => {
                   {error}
                 </p>
               )}
-              <div className="flex justify-end">
+              {/* <div className="flex justify-end">
                 <button
                   type="button"
                   onClick={() => {
@@ -215,7 +215,7 @@ const AuthModal = ({ isOpen, onClose, initialView, setView }) => {
                 >
                   Forgot Password?
                 </button>
-              </div>
+              </div> */}
               <button
                 type="submit"
                 className="w-full bg-sky-500 hover:bg-sky-700 text-white font-bold py-3 rounded-lg transition-colors duration-300 !mt-4"
