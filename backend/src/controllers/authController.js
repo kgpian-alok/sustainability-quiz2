@@ -45,7 +45,7 @@ const register = async (req, res) => {
       httpOnly: true,
       secure: true,
       maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "none",
+      sameSite: "None",
       path: "/",
     });
 
@@ -93,7 +93,7 @@ const login = async (req, res) => {
       httpOnly: true,
       secure: true,
       maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "none",
+      sameSite: "None",
       path: "/",
     });
 
@@ -125,7 +125,7 @@ const logout = (req, res) => {
   res.cookie("token", "", {
     httpOnly: true,
     expire: new Date(0),
-    sameSite: "lax", // Adjust based on your client-server setup
+    sameSite: "None", // Adjust based on your client-server setup
     path: "/",
   });
   res.status(200).json({ message: "Logged out successfully" });
